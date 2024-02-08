@@ -15,3 +15,6 @@ ps:
 
 restart:
 	@docker-compose restart
+
+clean:
+	@find . -d -name "__pycache__" -exec rm -rf {} \;

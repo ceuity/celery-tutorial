@@ -12,6 +12,7 @@ app.conf.task_routes = {
     "tasks.mul": {"queue": "a_queue"},
     "tasks.sum": {"queue": "b_queue"},
     "tasks.human.*": {"queue": "a_queue"},
+    "tasks.file.*": {"queue": "b_queue"},
 }
 
 ### Config from object
