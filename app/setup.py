@@ -11,6 +11,7 @@ app = Celery(__name__, broker=CELERY_BROKER_URL, backend=CELERY_BACKEND_URL)
 app.conf.task_routes = {
     "tasks.mul": {"queue": "a_queue"},
     "tasks.sum": {"queue": "b_queue"},
+    "tasks.wait": {"queue": "a_queue"},
     "tasks.human.*": {"queue": "a_queue"},
     "tasks.file.*": {"queue": "b_queue"},
 }
